@@ -128,6 +128,7 @@ body {
 .web__one:hover:before {
   background-image: url(../../images/tasty1.jpg);
   background-size: cover;
+  background-position: 40% 0;
 }
 
 .web__two {
@@ -181,6 +182,7 @@ body {
 .web__five:hover:before {
   background-image: url(../../images/tasty5.jpg);
   background-size: cover;
+  background-position: 45% 0;
 }
 
 .web__slogan {
