@@ -1,4 +1,172 @@
 @charset "UTF-8";
+/* сброс стилей браузера */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.2;
+}
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* конец кода сброса стилей браузера */
+html {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 62.5%;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.web {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.web__wallpaper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: "one two three four five";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.web__one, .web__two, .web__three, .web__four, .web__five {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: -webkit-filter 400ms ease;
+  transition: -webkit-filter 400ms ease;
+  transition: filter 400ms ease;
+  transition: filter 400ms ease, -webkit-filter 400ms ease;
+}
+
+.web__one:hover, .web__two:hover, .web__three:hover, .web__four:hover, .web__five:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.web__one:hover .web__slogan, .web__two:hover .web__slogan, .web__three:hover .web__slogan, .web__four:hover .web__slogan, .web__five:hover .web__slogan {
+  letter-spacing: .5rem;
+}
+
+.web__one::before, .web__two::before, .web__three::before, .web__four::before, .web__five::before {
+  content: "";
+  width: 86%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  position: absolute;
+  z-index: 2;
+}
+
+.web__one {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+  background: -webkit-gradient(linear, left top, right top, from(#4b6cb7), to(#455983));
+  background: linear-gradient(to right, #4b6cb7, #455983);
+}
+
+.web__two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: two;
+  background: -webkit-gradient(linear, left top, right top, from(#02aab0), to(#00cdac));
+  background: linear-gradient(to right, #02aab0, #00cdac);
+}
+
+.web__three {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: three;
+  background: -webkit-gradient(linear, left top, right top, from(#da22ff), to(#9733ee));
+  background: linear-gradient(to right, #da22ff, #9733ee);
+}
+
+.web__four {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: four;
+  background: -webkit-gradient(linear, left top, right top, from(#f09819), to(#edde5d));
+  background: linear-gradient(to right, #f09819, #edde5d);
+}
+
+.web__five {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: five;
+  background: -webkit-gradient(linear, left top, right top, from(#f857a6), to(#ff5858));
+  background: linear-gradient(to right, #f857a6, #ff5858);
+}
+
+.web__slogan {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 500;
+  color: white;
+  z-index: 3;
+  -webkit-transition: letter-spacing 400ms ease-in-out;
+  transition: letter-spacing 400ms ease-in-out;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,6 +177,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  grid-area: header;
   padding: 1rem;
   background-color: black;
   color: white;
@@ -93,61 +262,5 @@
 .header__btn:hover {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
-}
-
-/* сброс стилей браузера */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1.2;
-}
-
-ol {
-  padding-left: 1.4em;
-  list-style: decimal;
-}
-
-ul {
-  padding-left: 1.4em;
-  list-style: square;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* конец кода сброса стилей браузера */
-html {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 62.5%;
-  font-style: normal;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */

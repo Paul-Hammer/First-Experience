@@ -1,0 +1,77 @@
+.web {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__wallpaper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "one two three four five";
+    flex-grow: 1;
+  }
+
+  &__one,
+  &__two,
+  &__three,
+  &__four,
+  &__five {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: filter 400ms ease;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+
+    &:hover .web__slogan {
+      letter-spacing: .5rem;
+    }
+
+    &::before {
+      content: "";
+      width: 86%;
+      height: 200%;
+      background-color: rgba($text-color, .1);
+      transform: rotate(30deg);
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  &__one {
+    grid-area: one;
+    background: linear-gradient(to right, #4b6cb7, #455983);
+  }
+
+  &__two {
+    grid-area: two;
+    background: linear-gradient(to right, #02aab0, #00cdac);
+  }
+
+  &__three {
+    grid-area: three;
+    background: linear-gradient(to right, #da22ff, #9733ee);
+  }
+
+  &__four {
+    grid-area: four;
+    background: linear-gradient(to right, #f09819, #edde5d);
+  }
+
+  &__five {
+    grid-area: five;
+    background: linear-gradient(to right, #f857a6, #ff5858);
+  }
+
+  &__slogan {
+    @include font(4, 4, 500);
+    color: $text-color;
+    z-index: 3;
+    transition: letter-spacing 400ms ease-in-out;
+  }
+}
