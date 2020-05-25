@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: black;
   color: white;
 
@@ -25,5 +25,17 @@
 
   &__note {
     grid-area: note;
+    color: gray;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__btn {
+    background-color: gray;
+    border: none;
+    border-radius: .3rem;
   }
 }

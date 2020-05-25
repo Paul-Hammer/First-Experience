@@ -9,29 +9,3 @@
     line-height: #{$line-height}#{$unit};
     font-weight: $weight;
 }
-
-// @mixin myFont($map) {
-//     @each $key, $value in $map {
-//         @if ($key == 'fz') {
-//             font-size: $value;
-//         } @else if ($key == 'fw') {
-//             font-weight: $value;
-//         } @else if ($key == 'lh') {
-//             line-height: $value;
-//         }
-//     }
-// }
-
-// @mixin anotherFont($fz, $smt: null) {
-//     @if (unitless($fz)) {
-//         font-size: #{$fz}rem;
-//     } @else {
-//         font-size: $fz;
-//     }
-
-//     @if ($smt and unitless($smt)) {
-//         font-weight: $smt;
-//     } @else if ($smt and not unitless($smt)) {
-//         line-height: $smt;
-//     }
-// }
