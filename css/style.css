@@ -125,12 +125,22 @@ body {
   background: linear-gradient(to right, #4b6cb7, #455983);
 }
 
+.web__one:hover:before {
+  background-image: url(../../images/tasty1.jpg);
+  background-size: cover;
+}
+
 .web__two {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: two;
   background: -webkit-gradient(linear, left top, right top, from(#02aab0), to(#00cdac));
   background: linear-gradient(to right, #02aab0, #00cdac);
+}
+
+.web__two:hover:before {
+  background-image: url(../../images/tasty2.jpg);
+  background-size: cover;
 }
 
 .web__three {
@@ -141,6 +151,11 @@ body {
   background: linear-gradient(to right, #da22ff, #9733ee);
 }
 
+.web__three:hover:before {
+  background-image: url(../../images/tasty3.jpg);
+  background-size: cover;
+}
+
 .web__four {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
@@ -149,12 +164,23 @@ body {
   background: linear-gradient(to right, #f09819, #edde5d);
 }
 
+.web__four:hover:before {
+  background-image: url(../../images/tasty4.jpg);
+  background-size: cover;
+  background-position: 45% 0;
+}
+
 .web__five {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: five;
   background: -webkit-gradient(linear, left top, right top, from(#f857a6), to(#ff5858));
   background: linear-gradient(to right, #f857a6, #ff5858);
+}
+
+.web__five:hover:before {
+  background-image: url(../../images/tasty5.jpg);
+  background-size: cover;
 }
 
 .web__slogan {

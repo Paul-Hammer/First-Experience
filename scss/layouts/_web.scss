@@ -46,26 +46,52 @@
   &__one {
     grid-area: one;
     background: linear-gradient(to right, #4b6cb7, #455983);
+
+    &:hover:before {
+      background-image: url(../../images/tasty1.jpg);
+      background-size: cover;
+    }
   }
 
   &__two {
     grid-area: two;
     background: linear-gradient(to right, #02aab0, #00cdac);
+
+    &:hover:before {
+      background-image: url(../../images/tasty2.jpg);
+      background-size: cover;
+    }
   }
 
   &__three {
     grid-area: three;
     background: linear-gradient(to right, #da22ff, #9733ee);
+
+    &:hover:before {
+      background-image: url(../../images/tasty3.jpg);
+      background-size: cover;
+    }
   }
 
   &__four {
     grid-area: four;
     background: linear-gradient(to right, #f09819, #edde5d);
+
+    &:hover:before {
+      background-image: url(../../images/tasty4.jpg);
+      background-size: cover;
+      background-position: 45% 0;
+    }
   }
 
   &__five {
     grid-area: five;
     background: linear-gradient(to right, #f857a6, #ff5858);
+
+    &:hover:before {
+      background-image: url(../../images/tasty5.jpg);
+      background-size: cover;
+    }
   }
 
   &__slogan {
