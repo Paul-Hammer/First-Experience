@@ -5,7 +5,7 @@
   align-items: center;
   grid-area: header;
   padding: 1rem;
-  background-color: $header-bgc;
+  background: linear-gradient(to top, #000000, #434343);
   color: $text-color;
 
   @include media(576) {
@@ -75,6 +75,7 @@
     padding: 0;
     margin: 0;
     background-color: $btn-bgc;
+    box-shadow: 0 0 .5rem .1rem rgba($text-color, .5);
     transition: filter 400ms ease;
 
     &:hover {
