@@ -55,15 +55,36 @@
         transform: rotate(30deg);
       }
     }
+
+    &::after {
+      content: "";
+      width: 110%;
+      height: 96%;
+      background-size: cover;
+      transform: rotate(-15deg);
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 400ms ease;
+
+      @include media(992) {
+        width: 86%;
+        height: 200%;
+        transform: rotate(30deg);
+      }
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
 
   &__one {
     grid-area: one;
     background: linear-gradient(to right, #4b6cb7, #455983);
 
-    &:hover:before {
+    &::after {
       background-image: url(../../images/tasty1.jpg);
-      background-size: cover;
       background-position: 0 50%;
 
       @include media(992) {
@@ -76,9 +97,8 @@
     grid-area: two;
     background: linear-gradient(to right, #02aab0, #00cdac);
 
-    &:hover:before {
+    &::after {
       background-image: url(../../images/tasty2.jpg);
-      background-size: cover;
       background-position: 0 30%;
 
       @include media(992) {
@@ -91,9 +111,8 @@
     grid-area: three;
     background: linear-gradient(to right, #da22ff, #9733ee);
 
-    &:hover:before {
+    &::after {
       background-image: url(../../images/tasty3.jpg);
-      background-size: cover;
       background-position: 0 50%;
 
       @include media(992) {
@@ -106,9 +125,8 @@
     grid-area: four;
     background: linear-gradient(to right, #f09819, #edde5d);
 
-    &:hover:before {
+    &::after {
       background-image: url(../../images/tasty4.jpg);
-      background-size: cover;
       background-position: 0 50%;
 
       @include media(992) {
@@ -121,9 +139,8 @@
     grid-area: five;
     background: linear-gradient(to right, #f857a6, #ff5858);
 
-    &:hover:before {
+    &::after {
       background-image: url(../../images/tasty5.jpg);
-      background-size: cover;
       background-position: 0 50%;
 
       @include media(992) {

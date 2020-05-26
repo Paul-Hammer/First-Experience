@@ -164,6 +164,33 @@ body {
   }
 }
 
+.web__one::after, .web__two::after, .web__three::after, .web__four::after, .web__five::after {
+  content: "";
+  width: 110%;
+  height: 96%;
+  background-size: cover;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+@media (min-width: 992px) {
+  .web__one::after, .web__two::after, .web__three::after, .web__four::after, .web__five::after {
+    width: 86%;
+    height: 200%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
+.web__one:hover::after, .web__two:hover::after, .web__three:hover::after, .web__four:hover::after, .web__five:hover::after {
+  opacity: 1;
+}
+
 .web__one {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -172,14 +199,13 @@ body {
   background: linear-gradient(to right, #4b6cb7, #455983);
 }
 
-.web__one:hover:before {
+.web__one::after {
   background-image: url(../../images/tasty1.jpg);
-  background-size: cover;
   background-position: 0 50%;
 }
 
 @media (min-width: 992px) {
-  .web__one:hover:before {
+  .web__one::after {
     background-position: 40% 0;
   }
 }
@@ -192,14 +218,13 @@ body {
   background: linear-gradient(to right, #02aab0, #00cdac);
 }
 
-.web__two:hover:before {
+.web__two::after {
   background-image: url(../../images/tasty2.jpg);
-  background-size: cover;
   background-position: 0 30%;
 }
 
 @media (min-width: 992px) {
-  .web__two:hover:before {
+  .web__two::after {
     background-position: 70% 0;
   }
 }
@@ -212,14 +237,13 @@ body {
   background: linear-gradient(to right, #da22ff, #9733ee);
 }
 
-.web__three:hover:before {
+.web__three::after {
   background-image: url(../../images/tasty3.jpg);
-  background-size: cover;
   background-position: 0 50%;
 }
 
 @media (min-width: 992px) {
-  .web__three:hover:before {
+  .web__three::after {
     background-position: 10% 0;
   }
 }
@@ -232,14 +256,13 @@ body {
   background: linear-gradient(to right, #f09819, #edde5d);
 }
 
-.web__four:hover:before {
+.web__four::after {
   background-image: url(../../images/tasty4.jpg);
-  background-size: cover;
   background-position: 0 50%;
 }
 
 @media (min-width: 992px) {
-  .web__four:hover:before {
+  .web__four::after {
     background-position: 45% 0;
   }
 }
@@ -252,14 +275,13 @@ body {
   background: linear-gradient(to right, #f857a6, #ff5858);
 }
 
-.web__five:hover:before {
+.web__five::after {
   background-image: url(../../images/tasty5.jpg);
-  background-size: cover;
   background-position: 0 50%;
 }
 
 @media (min-width: 992px) {
-  .web__five:hover:before {
+  .web__five::after {
     background-position: 45% 0;
   }
 }
