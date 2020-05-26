@@ -1,3 +1,47 @@
+@keyframes smooth-appearance1 {
+  from {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes smooth-light {
+  from {
+    filter: brightness(1);
+  }
+
+  10% {
+    filter: brightness(1.2);
+  }
+
+  20% {
+    filter: brightness(1.2);
+  }
+
+  30% {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1);
+  }
+}
+
 .web {
   height: 100vh;
   display: flex;
@@ -11,10 +55,25 @@
     flex-grow: 1;
 
     @include media(992) {
-      display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: 1fr;
       grid-template-areas: "one two three four five";
+    }
+
+    &:hover .web__one::after,
+    &:hover .web__two::after,
+    &:hover .web__three::after,
+    &:hover .web__four::after,
+    &:hover .web__five::after {
+      animation: unset;
+    }
+
+    &:hover .web__one,
+    &:hover .web__two,
+    &:hover .web__three,
+    &:hover .web__four,
+    &:hover .web__five {
+      animation: unset;
     }
   }
 
@@ -82,10 +141,12 @@
   &__one {
     grid-area: one;
     background: linear-gradient(to right, #4b6cb7, #455983);
+    animation: smooth-light 10s 1s infinite;
 
     &::after {
       background-image: url(../../images/tasty1.jpg);
       background-position: 0 50%;
+      animation: smooth-appearance1 10s 1s infinite;
 
       @include media(992) {
         background-position: 40% 0;
@@ -96,10 +157,12 @@
   &__two {
     grid-area: two;
     background: linear-gradient(to right, #02aab0, #00cdac);
+    animation: smooth-light 10s 3s infinite;
 
     &::after {
       background-image: url(../../images/tasty2.jpg);
       background-position: 0 30%;
+      animation: smooth-appearance1 10s 3s infinite;
 
       @include media(992) {
         background-position: 70% 0;
@@ -110,10 +173,12 @@
   &__three {
     grid-area: three;
     background: linear-gradient(to right, #da22ff, #9733ee);
+    animation: smooth-light 10s 5s infinite;
 
     &::after {
       background-image: url(../../images/tasty3.jpg);
       background-position: 0 50%;
+      animation: smooth-appearance1 10s 5s infinite;
 
       @include media(992) {
         background-position: 10% 0;
@@ -124,10 +189,12 @@
   &__four {
     grid-area: four;
     background: linear-gradient(to right, #f09819, #edde5d);
+    animation: smooth-light 10s 7s infinite;
 
     &::after {
       background-image: url(../../images/tasty4.jpg);
       background-position: 0 50%;
+      animation: smooth-appearance1 10s 7s infinite;
 
       @include media(992) {
         background-position: 45% 0;
@@ -138,10 +205,12 @@
   &__five {
     grid-area: five;
     background: linear-gradient(to right, #f857a6, #ff5858);
+    animation: smooth-light 10s 9s infinite;
 
     &::after {
       background-image: url(../../images/tasty5.jpg);
       background-position: 0 50%;
+      animation: smooth-appearance1 10s 9s infinite;
 
       @include media(992) {
         background-position: 45% 0;

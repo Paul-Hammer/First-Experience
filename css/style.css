@@ -79,6 +79,88 @@ body {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes smooth-appearance1 {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes smooth-appearance1 {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes smooth-light {
+  from {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  10% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  20% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  30% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  to {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+
+@keyframes smooth-light {
+  from {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  10% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  20% {
+    -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+  }
+  30% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  to {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+
 .web {
   height: 100vh;
   display: -webkit-box;
@@ -105,14 +187,30 @@ body {
 
 @media (min-width: 992px) {
   .web__wallpaper {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "one two three four five";
   }
+}
+
+.web__wallpaper:hover .web__one::after,
+.web__wallpaper:hover .web__two::after,
+.web__wallpaper:hover .web__three::after,
+.web__wallpaper:hover .web__four::after,
+.web__wallpaper:hover .web__five::after {
+  -webkit-animation: unset;
+          animation: unset;
+}
+
+.web__wallpaper:hover .web__one,
+.web__wallpaper:hover .web__two,
+.web__wallpaper:hover .web__three,
+.web__wallpaper:hover .web__four,
+.web__wallpaper:hover .web__five {
+  -webkit-animation: unset;
+          animation: unset;
 }
 
 .web__one, .web__two, .web__three, .web__four, .web__five {
@@ -197,11 +295,15 @@ body {
   grid-area: one;
   background: -webkit-gradient(linear, left top, right top, from(#4b6cb7), to(#455983));
   background: linear-gradient(to right, #4b6cb7, #455983);
+  -webkit-animation: smooth-light 10s 1s infinite;
+          animation: smooth-light 10s 1s infinite;
 }
 
 .web__one::after {
   background-image: url(../../images/tasty1.jpg);
   background-position: 0 50%;
+  -webkit-animation: smooth-appearance1 10s 1s infinite;
+          animation: smooth-appearance1 10s 1s infinite;
 }
 
 @media (min-width: 992px) {
@@ -216,11 +318,15 @@ body {
   grid-area: two;
   background: -webkit-gradient(linear, left top, right top, from(#02aab0), to(#00cdac));
   background: linear-gradient(to right, #02aab0, #00cdac);
+  -webkit-animation: smooth-light 10s 3s infinite;
+          animation: smooth-light 10s 3s infinite;
 }
 
 .web__two::after {
   background-image: url(../../images/tasty2.jpg);
   background-position: 0 30%;
+  -webkit-animation: smooth-appearance1 10s 3s infinite;
+          animation: smooth-appearance1 10s 3s infinite;
 }
 
 @media (min-width: 992px) {
@@ -235,11 +341,15 @@ body {
   grid-area: three;
   background: -webkit-gradient(linear, left top, right top, from(#da22ff), to(#9733ee));
   background: linear-gradient(to right, #da22ff, #9733ee);
+  -webkit-animation: smooth-light 10s 5s infinite;
+          animation: smooth-light 10s 5s infinite;
 }
 
 .web__three::after {
   background-image: url(../../images/tasty3.jpg);
   background-position: 0 50%;
+  -webkit-animation: smooth-appearance1 10s 5s infinite;
+          animation: smooth-appearance1 10s 5s infinite;
 }
 
 @media (min-width: 992px) {
@@ -254,11 +364,15 @@ body {
   grid-area: four;
   background: -webkit-gradient(linear, left top, right top, from(#f09819), to(#edde5d));
   background: linear-gradient(to right, #f09819, #edde5d);
+  -webkit-animation: smooth-light 10s 7s infinite;
+          animation: smooth-light 10s 7s infinite;
 }
 
 .web__four::after {
   background-image: url(../../images/tasty4.jpg);
   background-position: 0 50%;
+  -webkit-animation: smooth-appearance1 10s 7s infinite;
+          animation: smooth-appearance1 10s 7s infinite;
 }
 
 @media (min-width: 992px) {
@@ -273,11 +387,15 @@ body {
   grid-area: five;
   background: -webkit-gradient(linear, left top, right top, from(#f857a6), to(#ff5858));
   background: linear-gradient(to right, #f857a6, #ff5858);
+  -webkit-animation: smooth-light 10s 9s infinite;
+          animation: smooth-light 10s 9s infinite;
 }
 
 .web__five::after {
   background-image: url(../../images/tasty5.jpg);
   background-position: 0 50%;
+  -webkit-animation: smooth-appearance1 10s 9s infinite;
+          animation: smooth-appearance1 10s 9s infinite;
 }
 
 @media (min-width: 992px) {
