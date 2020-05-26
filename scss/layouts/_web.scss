@@ -5,9 +5,17 @@
 
   &__wallpaper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "one two three four five";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "one" "two" "three" "four" "five";
     flex-grow: 1;
+
+    @include media(992) {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+      grid-template-areas: "one two three four five";
+    }
   }
 
   &__one,
@@ -29,17 +37,23 @@
     }
 
     &:hover .web__slogan {
-      letter-spacing: .5rem;
+      letter-spacing: 0.5rem;
     }
 
     &::before {
       content: "";
-      width: 86%;
-      height: 200%;
-      background-color: rgba($text-color, .1);
-      transform: rotate(30deg);
+      width: 110%;
+      height: 96%;
+      background-color: rgba($text-color, 0.1);
+      transform: rotate(-15deg);
       position: absolute;
       z-index: 2;
+
+      @include media(992) {
+        width: 86%;
+        height: 200%;
+        transform: rotate(30deg);
+      }
     }
   }
 
@@ -50,7 +64,11 @@
     &:hover:before {
       background-image: url(../../images/tasty1.jpg);
       background-size: cover;
-      background-position: 40% 0;
+      background-position: 0 50%;
+
+      @include media(992) {
+        background-position: 40% 0;
+      }
     }
   }
 
@@ -61,6 +79,11 @@
     &:hover:before {
       background-image: url(../../images/tasty2.jpg);
       background-size: cover;
+      background-position: 0 30%;
+
+      @include media(992) {
+        background-position: 70% 0;
+      }
     }
   }
 
@@ -71,6 +94,11 @@
     &:hover:before {
       background-image: url(../../images/tasty3.jpg);
       background-size: cover;
+      background-position: 0 50%;
+
+      @include media(992) {
+        background-position: 10% 0;
+      }
     }
   }
 
@@ -81,7 +109,11 @@
     &:hover:before {
       background-image: url(../../images/tasty4.jpg);
       background-size: cover;
-      background-position: 45% 0;
+      background-position: 0 50%;
+
+      @include media(992) {
+        background-position: 45% 0;
+      }
     }
   }
 
@@ -92,7 +124,11 @@
     &:hover:before {
       background-image: url(../../images/tasty5.jpg);
       background-size: cover;
-      background-position: 45% 0;
+      background-position: 0 50%;
+
+      @include media(992) {
+        background-position: 45% 0;
+      }
     }
   }
 

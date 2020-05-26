@@ -69,12 +69,26 @@ body {
 .web__wallpaper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: "one two three four five";
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "one" "two" "three" "four" "five";
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+@media (min-width: 992px) {
+  .web__wallpaper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "one two three four five";
+  }
 }
 
 .web__one, .web__two, .web__three, .web__four, .web__five {
@@ -103,18 +117,27 @@ body {
 }
 
 .web__one:hover .web__slogan, .web__two:hover .web__slogan, .web__three:hover .web__slogan, .web__four:hover .web__slogan, .web__five:hover .web__slogan {
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 
 .web__one::before, .web__two::before, .web__three::before, .web__four::before, .web__five::before {
   content: "";
-  width: 86%;
-  height: 200%;
+  width: 110%;
+  height: 96%;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
   position: absolute;
   z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .web__one::before, .web__two::before, .web__three::before, .web__four::before, .web__five::before {
+    width: 86%;
+    height: 200%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
 }
 
 .web__one {
@@ -128,12 +151,18 @@ body {
 .web__one:hover:before {
   background-image: url(../../images/tasty1.jpg);
   background-size: cover;
-  background-position: 40% 0;
+  background-position: 0 50%;
+}
+
+@media (min-width: 992px) {
+  .web__one:hover:before {
+    background-position: 40% 0;
+  }
 }
 
 .web__two {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: two;
   background: -webkit-gradient(linear, left top, right top, from(#02aab0), to(#00cdac));
   background: linear-gradient(to right, #02aab0, #00cdac);
@@ -142,11 +171,18 @@ body {
 .web__two:hover:before {
   background-image: url(../../images/tasty2.jpg);
   background-size: cover;
+  background-position: 0 30%;
+}
+
+@media (min-width: 992px) {
+  .web__two:hover:before {
+    background-position: 70% 0;
+  }
 }
 
 .web__three {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: three;
   background: -webkit-gradient(linear, left top, right top, from(#da22ff), to(#9733ee));
   background: linear-gradient(to right, #da22ff, #9733ee);
@@ -155,11 +191,18 @@ body {
 .web__three:hover:before {
   background-image: url(../../images/tasty3.jpg);
   background-size: cover;
+  background-position: 0 50%;
+}
+
+@media (min-width: 992px) {
+  .web__three:hover:before {
+    background-position: 10% 0;
+  }
 }
 
 .web__four {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: four;
   background: -webkit-gradient(linear, left top, right top, from(#f09819), to(#edde5d));
   background: linear-gradient(to right, #f09819, #edde5d);
@@ -168,12 +211,18 @@ body {
 .web__four:hover:before {
   background-image: url(../../images/tasty4.jpg);
   background-size: cover;
-  background-position: 45% 0;
+  background-position: 0 50%;
+}
+
+@media (min-width: 992px) {
+  .web__four:hover:before {
+    background-position: 45% 0;
+  }
 }
 
 .web__five {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: five;
   background: -webkit-gradient(linear, left top, right top, from(#f857a6), to(#ff5858));
   background: linear-gradient(to right, #f857a6, #ff5858);
@@ -182,7 +231,13 @@ body {
 .web__five:hover:before {
   background-image: url(../../images/tasty5.jpg);
   background-size: cover;
-  background-position: 45% 0;
+  background-position: 0 50%;
+}
+
+@media (min-width: 992px) {
+  .web__five:hover:before {
+    background-position: 45% 0;
+  }
 }
 
 .web__slogan {
