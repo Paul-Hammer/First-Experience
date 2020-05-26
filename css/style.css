@@ -44,6 +44,30 @@ html {
 }
 
 /* конец кода сброса стилей браузера */
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  src: url(../fonts/Ubuntu-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  src: url(../fonts/Ubuntu-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  src: url(../fonts/Ubuntu-Bold.ttf) format("truetype");
+}
+
 html {
   font-family: 'Ubuntu', sans-serif;
   font-size: 62.5%;
@@ -335,13 +359,6 @@ body {
   text-decoration: underline;
 }
 
-.header__link {
-  display: block;
-  padding: 1rem;
-  text-decoration: none;
-  color: white;
-}
-
 .header__nav {
   display: -ms-grid;
   display: grid;
@@ -352,10 +369,10 @@ body {
 }
 
 .header__btn {
-  border: none;
+  padding: 1rem;
   border-radius: 0.3rem;
-  padding: 0;
-  margin: 0;
+  text-decoration: none;
+  color: white;
   background-color: gray;
   -webkit-box-shadow: 0 0 0.5rem 0.1rem rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 0.5rem 0.1rem rgba(255, 255, 255, 0.5);

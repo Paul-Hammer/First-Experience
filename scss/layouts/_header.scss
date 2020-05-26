@@ -56,13 +56,6 @@
     }
   }
 
-  &__link {
-    display: block;
-    padding: 1rem;
-    text-decoration: none;
-    color: $text-color;
-  }
-
   &__nav {
     display: grid;
     grid-template-columns: auto auto;
@@ -70,10 +63,10 @@
   }
 
   &__btn {
-    border: none;
+    padding: 1rem;
     border-radius: 0.3rem;
-    padding: 0;
-    margin: 0;
+    text-decoration: none;
+    color: $text-color;
     background-color: $btn-bgc;
     box-shadow: 0 0 .5rem .1rem rgba($text-color, .5);
     transition: filter 400ms ease;
